@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HomeView()
+            HomeView(selectedPriceRangeBestSegmentedIndex: 0)
                 .tabItem {
                     Image(systemName: "1.circle")
                     Text("First")

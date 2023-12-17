@@ -96,5 +96,5 @@ struct DiningListItemView: View {
 }
 
 #Preview {
-    DiningListItemView(item: .init(id: .init(), name: "name", diningCategory: "category", location: "location", imageName: "homage", grade: nil, isBookmarked: true, isGuideSelected: true), isGuideSelected: true, isUserReviewDiningList: true)
+    DiningListItemView(item: .init(id: .init(), name: "name", diningCategory: "category", location: "location", imageName: "homage", grade: nil, reviewCount: nil, isBookmarked: true, isGuideSelected: true), isGuideSelected: true, isUserReviewDiningList: true)
 }

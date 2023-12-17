@@ -91,6 +91,7 @@ struct DiningListItem: Identifiable {
     let location: String
     let imageName: String
     let grade: Float?
+    let reviewCount: Int?
     let isBookmarked: Bool
     let isGuideSelected: Bool
 }
