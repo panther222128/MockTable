@@ -9,9 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @State var selectedPriceRangeBestSegmentedIndex: Int = 0
     @State private var searchText = ""
+    private let priceRangeBestSegmentedTitles = ["First", "Second"]
     
     var body: some View {
+        // MARK: - TabView indicator position
         VStack {
             SearchView(text: $searchText)
             RegionButtonView()
@@ -50,6 +53,11 @@ struct HomeView: View {
                     }
                     .frame(height: 100)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                    DiningCategoryBestView()
+                    PriceRangeBestSegmentedView()
+                        .frame(height: 840)
+                    // MARK: - 
+                    ThemeBestCategoryView()
                 }
             }
         }
@@ -57,5 +65,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(selectedPriceRangeBestSegmentedIndex: 0)
 }
