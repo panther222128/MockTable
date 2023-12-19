@@ -8,12 +8,14 @@
 import SwiftUI
 
 protocol DiningListView: View {
-    var title: String { get }
-    var subtitle: String { get }
+    var title: String? { get }
+    var subtitle: String? { get }
+    var diningGroupName: String? { get }
     var items: [DiningListItem] { get }
     var isSeeAllExists: Bool { get }
     var isGuideBookSelected: Bool { get }
     var isUserReviewDiningList: Bool { get }
+    var isDiningGroup: Bool { get }
 }
 
 extension DiningListView {
@@ -22,14 +24,16 @@ extension DiningListView {
             HStack {
                 VStack {
                     HStack {
-                        Text(title)
-                            .font(.system(size: 24))
-                            .fontWeight(.bold)
+                        if let title = title {
+                            Text(title)
+                                .font(.system(size: 24))
+                                .fontWeight(.bold)
+                        }
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 0, leading: 12, bottom: 1, trailing: 0))
                     HStack {
-                        Text(subtitle)
+                        Text(subtitle ?? "")
                             .font(.system(size: 16))
                         Spacer()
                     }
@@ -49,6 +53,9 @@ extension DiningListView {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: [GridItem(.flexible(), spacing: 16)], spacing: 16) {
+                    if isDiningGroup {
+                        Text(diningGroupName ?? "")
+                    }
                     ForEach(items) { item in
                         if !isUserReviewDiningList {
                             DiningListItemView(item: item, isGuideSelected: isGuideBookSelected, isUserReviewDiningList: false)

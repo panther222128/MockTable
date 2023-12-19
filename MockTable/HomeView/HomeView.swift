@@ -58,6 +58,7 @@ struct HomeView: View {
                         .frame(height: 840)
                     // MARK: - 
                     ThemeBestCategoryView()
+                    DiningGroupListView()
                 }
             }
         }
