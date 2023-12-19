@@ -20,6 +20,7 @@
 		A097EBE22B2ADEA30056FB7B /* OnDiningListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097EBE12B2ADEA30056FB7B /* OnDiningListView.swift */; };
 		A097EBE42B2ADEF60056FB7B /* GuidebookSelectedDiningListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097EBE32B2ADEF60056FB7B /* GuidebookSelectedDiningListView.swift */; };
 		A097EBE62B2AE0110056FB7B /* BannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097EBE52B2AE0110056FB7B /* BannerItemView.swift */; };
+		A0D73BF62B2FC8C00090293C /* DiningGroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D73BF52B2FC8C00090293C /* DiningGroupListView.swift */; };
 		A0FF84872B29914300261705 /* MockTableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FF84862B29914300261705 /* MockTableApp.swift */; };
 		A0FF84892B29914300261705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FF84882B29914300261705 /* ContentView.swift */; };
 		A0FF848B2B29914500261705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0FF848A2B29914500261705 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		A097EBE12B2ADEA30056FB7B /* OnDiningListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDiningListView.swift; sourceTree = "<group>"; };
 		A097EBE32B2ADEF60056FB7B /* GuidebookSelectedDiningListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidebookSelectedDiningListView.swift; sourceTree = "<group>"; };
 		A097EBE52B2AE0110056FB7B /* BannerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemView.swift; sourceTree = "<group>"; };
+		A0D73BF52B2FC8C00090293C /* DiningGroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningGroupListView.swift; sourceTree = "<group>"; };
 		A0FF84832B29914300261705 /* MockTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FF84862B29914300261705 /* MockTableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableApp.swift; sourceTree = "<group>"; };
 		A0FF84882B29914300261705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				A9E8847E2B2EC139000FED25 /* ScrollableSegmentedListView.swift */,
+				A0D73BF52B2FC8C00090293C /* DiningGroupListView.swift */,
 			);
 			path = ScrollableSegmentedListView;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				A9E8847F2B2EC139000FED25 /* ScrollableSegmentedListView.swift in Sources */,
 				A097EBE22B2ADEA30056FB7B /* OnDiningListView.swift in Sources */,
 				A097EBD92B2AC73A0056FB7B /* RecommendationDiningListView.swift in Sources */,
+				A0D73BF62B2FC8C00090293C /* DiningGroupListView.swift in Sources */,
 				A097EBD52B2AC6D70056FB7B /* DiningListItemView.swift in Sources */,
 				A097EBC92B2A78C20056FB7B /* RegionButtonView.swift in Sources */,
 				A9E884782B2DD062000FED25 /* SegmentedListItemView.swift in Sources */,
