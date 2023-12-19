@@ -69,24 +69,45 @@ struct DiningListItemView: View {
                             Text(String(grade))
                         }
                         VStack {
+                            HStack {
+                                VStack {
+                                    
+                                    HStack {
+                                        Text(item.name)
+                                            .font(.system(size: 16))
+                                        Spacer()
+                                    }
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                    HStack {
+                                        Text(item.diningCategory + " - " + item.location)
+                                            .font(.system(size: 12))
+                                        Spacer()
+                                    }
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                }
+                                if !item.isBookmarked {
+                                    Image(systemName: "bookmark")
+                                } else {
+                                    Image(systemName: "bookmark.fill")
+                                }
+                            }
                             
-                            HStack {
-                                Text(item.name)
-                                    .font(.system(size: 16))
-                                Spacer()
-                            }
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            HStack {
-                                Text(item.diningCategory + " - " + item.location)
-                                    .font(.system(size: 12))
-                                Spacer()
-                            }
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         }
-                        if !item.isBookmarked {
-                            Image(systemName: "bookmark")
-                        } else {
-                            Image(systemName: "bookmark.fill")
+                        
+                    }
+                    if let option = item.reservationOptions {
+                        HStack {
+                            ForEach(option) { option in
+                                Button {
+                                    
+                                } label: {
+                                    Text(option.option)
+                                        .foregroundStyle(Color.white)
+                                }
+                                .background(
+                                    Color.orange
+                                )
+                            }
                         }
                     }
                 }
@@ -96,5 +117,5 @@ struct DiningListItemView: View {
 }
 
 #Preview {
-    DiningListItemView(item: .init(id: .init(), name: "name", diningCategory: "category", location: "location", imageName: "homage", grade: nil, reviewCount: nil, isBookmarked: true, isGuideSelected: true), isGuideSelected: true, isUserReviewDiningList: true)
+    DiningListItemView(item: .init(id: .init(), name: "name", diningCategory: "category", location: "location", imageName: "homage", grade: nil, reviewCount: nil, isBookmarked: true, isGuideSelected: true, reservationOptions: [.init(id: .init(), option: "오후 1:00"), .init(id: .init(), option: "오후 6:00"), .init(id: .init(), option: "오후 8:00")]), isGuideSelected: true, isUserReviewDiningList: true)
 }

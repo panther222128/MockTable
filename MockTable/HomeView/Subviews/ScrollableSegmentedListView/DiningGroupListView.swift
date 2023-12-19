@@ -16,4 +16,6 @@ struct DiningGroupListView: DiningListView {
     var isGuideBookSelected: Bool = false
     var isUserReviewDiningList: Bool = false
     var isDiningGroup: Bool = true
+    var isTrailingSeeAllExists: Bool = false
+    var isReservationPossible: Bool = false
 }

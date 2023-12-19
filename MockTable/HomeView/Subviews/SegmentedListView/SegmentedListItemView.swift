@@ -37,5 +37,5 @@ struct SegmentedListItemView: View {
 }
 
 #Preview {
-    SegmentedListItemView(item: .init(id: .init(), name: "스시오마주", diningCategory: "오마카세", location: "신사동", imageName: "homage", grade: 5.0, reviewCount: nil, isBookmarked: false, isGuideSelected: false))
+    SegmentedListItemView(item: .init(id: .init(), name: "스시오마주", diningCategory: "오마카세", location: "신사동", imageName: "homage", grade: 5.0, reviewCount: nil, isBookmarked: false, isGuideSelected: false, reservationOptions: nil))
 }

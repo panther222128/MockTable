@@ -16,7 +16,7 @@ struct HomeView: View {
     var body: some View {
         // MARK: - TabView indicator position
         VStack {
-            SearchView(text: $searchText)
+            HomeSearchView(text: $searchText)
             RegionButtonView()
             ScrollView(.vertical, showsIndicators: true) {
                 VStack {
@@ -58,7 +58,8 @@ struct HomeView: View {
                         .frame(height: 840)
                     // MARK: - 
                     ThemeBestCategoryView()
-                    DiningGroupListView()
+                    ReservationPossibleDiningListview()
+                    ScrollableSegmentedListView()
                 }
             }
         }
