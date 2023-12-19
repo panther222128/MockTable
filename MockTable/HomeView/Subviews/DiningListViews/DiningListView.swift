@@ -16,6 +16,8 @@ protocol DiningListView: View {
     var isGuideBookSelected: Bool { get }
     var isUserReviewDiningList: Bool { get }
     var isDiningGroup: Bool { get }
+    var isTrailingSeeAllExists: Bool { get }
+    var isReservationPossible: Bool { get }
 }
 
 extension DiningListView {
@@ -42,11 +44,13 @@ extension DiningListView {
                 Button {
                     
                 } label: {
-                    HStack {
-                        Text("전체보기")
-                            .foregroundStyle(Color.black)
-                        Image(systemName: "arrow.right")
-                            .foregroundStyle(.black)
+                    if isTrailingSeeAllExists {
+                        HStack {
+                            Text("전체보기")
+                                .foregroundStyle(Color.black)
+                            Image(systemName: "arrow.right")
+                                .foregroundStyle(.black)
+                        }
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
@@ -67,7 +71,6 @@ extension DiningListView {
                                 )
                         }
                     }
-                    
                     Button {
                         
                     } label: {
@@ -88,7 +91,7 @@ extension DiningListView {
 }
 
 #Preview {
-    UserReviewDiningListView()
+    HotplaceDiningListView()
 }
 
 struct DiningListItem: Identifiable {
@@ -101,4 +104,10 @@ struct DiningListItem: Identifiable {
     let reviewCount: Int?
     let isBookmarked: Bool
     let isGuideSelected: Bool
+    let reservationOptions: [ReservationOption]?
+}
+
+struct ReservationOption: Identifiable {
+    let id: UUID
+    let option: String
 }

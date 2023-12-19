@@ -12,28 +12,27 @@ struct ContentView: View {
         TabView {
             HomeView(selectedPriceRangeBestSegmentedIndex: 0)
                 .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First")
+                    Image(systemName: "house")
                 }
             
-            Text("Second")
+            SearchView()
                 .tabItem {
-                    Text("Second")
+                    Image(systemName: "magnifyingglass")
                 }
             
-            Text("Third")
+            ReviewListView()
                 .tabItem {
-                    Text("Third")
+                    Image(systemName: "ellipsis.message")
                 }
             
-            Text("Fourth")
+            MyDiningView()
                 .tabItem {
-                    Text("Fourth")
+                    Image(systemName: "calendar")
                 }
             
-            Text("Fifth")
+            MyPageView()
                 .tabItem {
-                    Text("Fifth")
+                    Image(systemName: "person.fill")
                 }
         }
     }

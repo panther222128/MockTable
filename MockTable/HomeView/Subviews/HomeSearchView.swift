@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct HomeSearchView: View {
     
     @Binding var text: String
     
@@ -57,7 +57,7 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(text: .init(get: {
+    HomeSearchView(text: .init(get: {
         return ""
     }, set: { string in
         

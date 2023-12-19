@@ -62,5 +62,5 @@ struct TenMoreListView: SegmentListView {
 }
 
 #Preview {
-    ThreeLessListView(selectedIndex: 0, items: [.init(id: .init(), name: "", diningCategory: "", location: "", imageName: "", grade: 5.0, reviewCount: 982, isBookmarked: false, isGuideSelected: false)])
+    ThreeLessListView(selectedIndex: 0, items: [.init(id: .init(), name: "", diningCategory: "", location: "", imageName: "", grade: 5.0, reviewCount: 982, isBookmarked: false, isGuideSelected: false, reservationOptions: nil)])
 }
